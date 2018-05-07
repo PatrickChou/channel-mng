@@ -6,13 +6,15 @@
  * 
  */
 
-let baseUrl = ''; 
+let baseUrl = ''
+let productUrl = ''
 
 
 if(process.env.NODE_ENV == 'production'){
-	baseUrl = 'kodosale.fosunfinancial.com';
+	baseUrl = 'kodosale.fosunfinancial.com'
 }
 
 export {
 	baseUrl,
+	productUrl
 }

@@ -91,4 +91,14 @@ const demo2 = function (opt) {
         array: articles
       }
 }
-Mock.mock('/news', /post|get/i, demo2);//当post或get请求到/news路由时Mock会拦截请求并返回上面的数据
+const loginUser = (opt) => {
+    return {
+        userInfo: {
+            token: 'wewewew232323wewewecv',
+            userName: 'test',
+            nike: '测试'
+        }
+    }
+}
+Mock.mock('/api/news', /post|get/i, demo2);//当post或get请求到/news路由时Mock会拦截请求并返回上面的数据
+Mock.mock('/api/login', /post|get/i, loginUser);
